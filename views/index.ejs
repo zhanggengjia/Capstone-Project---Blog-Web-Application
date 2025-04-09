@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') %>
+
+<div class="container">
+  <%articleList.forEach((article, id)=>{%>
+
+  <div class="card mb-3" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title"><%= article.title %></h5>
+      <p class="card-text"><%= article.content %></p>
+      <a href="/view/<%=id%>" class="btn btn-primary">View</a>
+      <a href="/edit/<%=id%>" class="btn btn-secondary">Edit</a>
+      <a href="/delete/<%=id%>" class="btn btn-danger">Delete</a>
+    </div>
+  </div>
+
+  <%})%>
+</div>
+<%- include('partials/footer.ejs') %>

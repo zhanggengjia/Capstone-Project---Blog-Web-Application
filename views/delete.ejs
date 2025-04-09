@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs') %>
+<div class="container">
+  <form action="/delete/<%=id%>" method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label"
+        >Title</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        placeholder="<%=article.title%>"
+        name = "title"
+        disabled
+      />
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label"
+        >Content</article></label
+      >
+      <textarea
+        class="form-control"
+        id="content"
+        rows="3"
+        placeholder="<%= article.content  %>"
+        name="content"
+        disabled
+      ></textarea>
+    </div>
+    <button type="submit">Delete</button>
+  </form>
+</div>
+<%- include('partials/footer.ejs') %>
