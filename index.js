@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // ✅ 支援 Render 與本地開發
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
